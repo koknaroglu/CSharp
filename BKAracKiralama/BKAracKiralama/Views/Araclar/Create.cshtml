@@ -1,0 +1,63 @@
+﻿@model BKAracKiralama.Models.Arac
+
+@{
+    ViewData["Title"] = "Ekle";
+}
+
+<h1>Ekle</h1>
+
+<h4>Araç</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Plaka" class="control-label"></label>
+                <input asp-for="Plaka" class="form-control" />
+                <span asp-validation-for="Plaka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yıl" class="control-label"></label>
+                <input asp-for="Yıl" class="form-control" />
+                <span asp-validation-for="Yıl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Renk" class="control-label"></label>
+                <input asp-for="Renk" class="form-control" />
+                <span asp-validation-for="Renk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GünlükÜcret" class="control-label"></label>
+                <input asp-for="GünlükÜcret" class="form-control" />
+                <span asp-validation-for="GünlükÜcret" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cins" class="control-label"></label>
+                <input asp-for="Cins" class="form-control" />
+                <span asp-validation-for="Cins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

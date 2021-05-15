@@ -1,0 +1,54 @@
+﻿@model BKAracKiralama.Models.Kiralama
+
+@{
+    ViewData["Title"] = "Detaylar";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>Kiralama</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AlışGünü)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AlışGünü)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GeriTeslimGünü)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GeriTeslimGünü)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AracID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AracID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Arac.Plaka)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Arac.Plaka)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MüsteriID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MüsteriID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Müsteri.TC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Müsteri.TC)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Düzenle</a> |
+    <a asp-action="Index">Listeye Dön</a>
+</div>

@@ -1,0 +1,63 @@
+﻿@model BKAracKiralama.Models.Arac
+
+@{
+    ViewData["Title"] = "Sil";
+}
+
+<h1>Sil</h1>
+
+<h3>Silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Araç</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Plaka)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Plaka)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Marka)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Marka)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yıl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yıl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Renk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Renk)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GünlükÜcret)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GünlükÜcret)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cins)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cins)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Dön</a>
+    </form>
+</div>

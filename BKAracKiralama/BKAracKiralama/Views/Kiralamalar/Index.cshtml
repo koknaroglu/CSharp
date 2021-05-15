@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BKAracKiralama.Models.Kiralama>
+
+@{
+    ViewData["Title"] = "Kiralamalar";
+}
+
+<h1>Kiralamalar</h1>
+
+<p>
+    <a asp-action="Create">Yeni Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AlışGünü)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeriTeslimGünü)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AracID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MüsteriID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlışGünü)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeriTeslimGünü)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arac.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Müsteri.ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
